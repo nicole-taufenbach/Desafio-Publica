@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Basquete</title>
+
+    <link rel="stylesheet" href="./table.css">
+    <link rel="stylesheet" href="./../css/main-css.css">
+
+    <link href="https://fontawesome.com/icons/ghost?style=solid/css/fontawesome.css" rel="stylesheet">  
+
+    <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap"
+    rel="stylesheet">
+
+    <script src="./index.js"></script>
+
+</head>
+<body >
+    <i class="fas fa-basketball-ball"></i>
+    <table border="1" class="gameTable">
+        <thead>
+            <tr class="tableRow">
+                <th class="tableRow">Jogo</th>
+                <th class="tableRow">Placar</th>
+                <th class="tableRow">Mínimo da Temporada</th>
+                <th class="tableRow">Máximo da Temporada</th>
+                <th class="tableRow">Quebra recorde min.</th>
+                <th class="tableRow">Quebra recorde max.</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="tableRow">
+                <td>1</td>
+                <td>12</td>
+                <td>12</td>
+                <td>12</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr class="tableRow">
+                <td>1</td>
+                <td>12</td>
+                <td>12</td>
+                <td>12</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr class="tableRow">
+                <td>1</td>
+                <td>12</td>
+                <td>12</td>
+                <td>12</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+            <div class="inputForm">
+                Jogo: <input type="number" name="jogo" id="jogo" min="0" max="999"> <br>
+                Placar: <input type="number" name="placar" id="placar"> <br>
+                Mínimo da Temporada: <input type="number" name="minseason" id="minseason"> <br>
+                Máximo da Temporada: <input type="number" name="maxseason" id="maxseason"> <br>
+                Quebra recorde min.: <input type="number" name="breakmin" id="breakmin"> <br>
+                Quebra recorde max.: <input type="number" name="breakmax" id="breakmax">
+                
+                <button onclick="addRow();">Novo Jogo</button>
+            </div>
+        </div>
+            
+        </tbody>
+    
+    </table>
+
+        <!-- <button class="addGame"> Inserir novo Jogo</button> -->
+</body>
+</html>
