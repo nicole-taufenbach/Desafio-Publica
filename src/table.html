@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="./table.css">
     <link rel="stylesheet" href="./../css/main-css.css">
 
+    <link rel="shortcut icon" href="../assets/basketball-icon.png" type="img/png">
     <link href="https://fontawesome.com/icons/ghost?style=solid/css/fontawesome.css" rel="stylesheet">  
 
     <link
     href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap"
     rel="stylesheet">
 
-    <script src="./index.js"></script>
+
 
 </head>
 <body >
@@ -22,12 +23,12 @@
     <table border="1" class="gameTable">
         <thead>
             <tr class="tableRow">
-                <th class="tableRow">Jogo</th>
-                <th class="tableRow">Placar</th>
-                <th class="tableRow">Mínimo da Temporada</th>
-                <th class="tableRow">Máximo da Temporada</th>
-                <th class="tableRow">Quebra recorde min.</th>
-                <th class="tableRow">Quebra recorde max.</th>
+                <th>Jogo</th>
+                <th>Placar</th>
+                <th>Mínimo da Temporada</th>
+                <th>Máximo da Temporada</th>
+                <th>Quebra recorde min.</th>
+                <th>Quebra recorde max.</th>
             </tr>
         </thead>
         <tbody>
@@ -57,21 +58,23 @@
             </tr>
 
             <div class="inputForm">
-                Jogo: <input type="number" name="jogo" id="jogo" min="0" max="999"> <br>
-                Placar: <input type="number" name="placar" id="placar"> <br>
-                Mínimo da Temporada: <input type="number" name="minseason" id="minseason"> <br>
-                Máximo da Temporada: <input type="number" name="maxseason" id="maxseason"> <br>
-                Quebra recorde min.: <input type="number" name="breakmin" id="breakmin"> <br>
-                Quebra recorde max.: <input type="number" name="breakmax" id="breakmax">
+                Jogo: <input type="number" name="jogo" id="jogo" onKeyPress=validationMinMax(this) min="1" max="99">
+                Placar: <input type="number" name="placar" id="placar" onKeyPress=validationMinMax(this) min="1" max="99"> <br> 
+                Mínimo da Temporada: <input type="number" name="minseason" id="minseason" onKeyPress=validationMinMax(this) min="1" max="99"> <br>
+                Máximo da Temporada: <input type="number" name="maxseason" id="maxseason" onKeyPress=validationMinMax(this) min="1" max="99"> <br>
+                Quebra recorde mínimo: <input type="number" name="breakmin" id="breakmin" onKeyPress=validationMinMax(this) min="1" max="99"> <br>
+                Quebra recorde máximo: <input type="number" name="breakmax" id="breakmax" onKeyPress=validationMinMax(this) min="1" max="99">
                 
-                <button onclick="addRow();">Novo Jogo</button>
+                <button class="addGame" onclick="addRow();">Novo Jogo</button> <!-- identificando o botão para o js-->
             </div>
         </div>
             
         </tbody>
     
     </table>
-
-        <!-- <button class="addGame"> Inserir novo Jogo</button> -->
+    
+    
+    <script src="./js/index.js"></script>
+    <script src="./js/validation.js"></script>
 </body>
 </html>

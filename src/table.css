@@ -1,6 +1,6 @@
 .addGame { 
-margin-left: 100px;
-width: 15rem;
+margin-top: 10px;
+width: 11rem;
 height: 5rem;
 font: 700 1.4rem Archivo;
 
@@ -11,4 +11,8 @@ justify-content: center;
 text-decoration: none;
 
 color: var(--color-primary);
+}
+
+.gameTable {
+    margin-left: 40px;
 }
